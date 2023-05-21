@@ -1,0 +1,14 @@
+:global(.breakpoint) & {
+  @media (min-width: calc($breakpoint--xl + 1px)) {
+    height: 400px;
+  }
+
+  margin-block: calc(var(--spacing-base) * -4);
+
+  &--mobile {
+    margin: calc(var(--spacing-base) * -4);
+    &--ios {
+      margin-inline: calc(var(--spacing-base) * -4);
+    }
+  }
+}
