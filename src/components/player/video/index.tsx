@@ -1,7 +1,18 @@
 import { useCurrentFrame, AbsoluteFill } from "remotion";
-import { TextEditor } from "src/shared/text-editor";
-import { DraggableContent } from "src/shared/draggable-content";
+import { TextEditor } from "src/shared/components/text-editor";
+import { DraggableContent } from "src/shared/components/draggable-content";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
+import styles from "./styles.module.scss";
+
+const toolbarOptions = {
+  options: ["inline", "list", "history"],
+  inline: {
+    options: ["bold", "italic", "underline", "strikethrough"],
+  },
+  list: {
+    options: ["unordered", "ordered"],
+  },
+};
 
 interface Props {
   pause: () => void;
@@ -9,30 +20,11 @@ interface Props {
 export function Video({ pause }: Props) {
   const frame = useCurrentFrame();
   return (
-    <AbsoluteFill
-      style={{
-        justifyContent: "center",
-        alignItems: "center",
-        fontSize: 30,
-        backgroundColor: "white",
-      }}
-    >
+    <AbsoluteFill className={styles.Video}>
       The current frame is {frame}.
       <DraggableContent>
         <div>
-          <TextEditor
-            toolbarOnFocus
-            onFocus={pause}
-            toolbar={{
-              options: ["inline", "list", "history"],
-              inline: {
-                options: ["bold", "italic", "underline", "strikethrough"],
-              },
-              list: {
-                options: ["unordered", "ordered"],
-              },
-            }}
-          />
+          <TextEditor toolbarOnFocus onFocus={pause} toolbar={toolbarOptions} />
         </div>
       </DraggableContent>
     </AbsoluteFill>
