@@ -18,7 +18,7 @@ module.exports = {
 
   plugins: ["react"],
   rules: {
-    "no-console": "error",
+    "no-console": "off",
     quotes: [2, "double"],
     semi: ["error", "always"],
     indent: ["error", 2],
@@ -26,5 +26,7 @@ module.exports = {
     "react/react-in-jsx-scope": "off",
     "@typescript-eslint/explicit": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-confusing-void-expression": "off",
+    "@typescript-eslint/strict-boolean-expressions": "off",
   },
 };
