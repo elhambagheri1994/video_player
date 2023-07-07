@@ -1,0 +1,11 @@
+.fieldSet {
+  width: 100%;
+  & > div {
+    width: 100%;
+  }
+  .errorText {
+    position: absolute;
+    font-size: 0.7rem;
+    color: var(--error);
+  }
+}

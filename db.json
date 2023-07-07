@@ -1,0 +1,51 @@
+{
+  "users": [
+    {
+      "email": "test@test.commm",
+      "password": "$2a$12$NlXdWsY9OHebaeQjjrwXt.UAn9J9VNC683aMIIwBWWx/.Z5aZAok6",
+      "username": "test",
+      "id": 1,
+      "PhoneNumber": "0936-602-6672",
+      "name": "testee"
+    }
+  ],
+  "public-addresses": [
+    {
+      "name": "test",
+      "address": "ونک، میدان عطار نیشابوری، بزرگراه کردستان، محمدباق",
+      "latitude": "12",
+      "longitude": "12e",
+      "id": 1
+    }
+  ],
+  "favorite-addresses": [
+    {
+      "id": 1,
+      "name": "Home",
+      "address": "No. 101, North Kargar St., Tehran",
+      "latitude": 35.720179,
+      "longitude": "51.389634eee"
+    },
+    {
+      "name": "test",
+      "address": "ونک، میدان عطار نیشابوری، بزرگراه کردستان، محمدباق",
+      "latitude": "12",
+      "longitude": "12",
+      "id": 2
+    },
+    {
+      "name": "edit_test2ff",
+      "address": "ونک، میدان عطار نیشابوری، بزرگراه کردستان، محمدباق",
+      "latitude": "12",
+      "longitude": "ss12",
+      "id": 3
+    },
+    {
+      "name": "edit_test2ff",
+      "address": "ونک، میدان عطار نیشابوری، بزرگراه کردستان، محمدباق",
+      "latitude": "12",
+      "longitude": "12",
+      "id": 5
+    }
+  ]
+}
