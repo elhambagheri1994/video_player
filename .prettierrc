@@ -11,5 +11,6 @@
   "jsxSingleQuote": true,
   "html.format.wrapLineLength": 80,
   "html.format.wrapAttributes": "force-expand-multiline",
-  "arrowParens": "always"
+  "arrowParens": "always",
+  "importOrderSortSpecifiers": true
 }
