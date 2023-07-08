@@ -7,7 +7,7 @@ axios.interceptors.response.use(
     return response;
   },
   (error) => {
-    throw new Error(error.response.data as string) || 'an Error occurred';
+    throw (error.response.data as string) || 'an Error occurred';
   }
 );
 
