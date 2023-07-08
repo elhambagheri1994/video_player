@@ -9,5 +9,5 @@ export function getStorageData(key: string) {
 }
 
 export function deleteStorageData(key: string) {
-  return localStorage.removeItem(key);
+  localStorage.removeItem(key);
 }

@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { DynamicForm } from '@/shared/components/dynamic-form';
 import { login } from '@/shared/services/login-service';
 import styles from './styles.module.scss';
@@ -39,8 +39,8 @@ function Login() {
     try {
       await login<GLogin>(values);
       navigate(routes.DASHBOARD);
-    } catch (err: any) {
-      setError('invalid username or password');
+    } catch (error: unknown) {
+      setError(error as string);
     }
   }
   return (
@@ -49,6 +49,9 @@ function Login() {
       {error && <CustomAlert type='error' text={error} />}
       <div className={styles.formContainer}>
         <DynamicForm fields={fields} buttonText='Login' submit={handleSubmit} />
+        <div className={styles.RegisterLink}>
+          <Link to={routes.REGISTER}>Create New Account </Link>
+        </div>
       </div>
     </div>
   );

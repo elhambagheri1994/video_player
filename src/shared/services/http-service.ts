@@ -6,7 +6,9 @@ axios.interceptors.response.use(
   (response) => {
     return response;
   },
-  (error) => {}
+  (error) => {
+    throw new Error(error.response.data as string) || 'an Error occurred';
+  }
 );
 
 export default {

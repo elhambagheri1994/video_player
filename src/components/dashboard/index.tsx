@@ -26,10 +26,9 @@ function Dashboard() {
   useEffect(() => {
     getAddresses();
   }, []);
-  const getAddresses = () => {
-    httpService.get(url).then((response) => {
-      setData(response.data);
-    });
+  const getAddresses = async () => {
+    const { data } = await httpService.get(url);
+    setData(data);
   };
   const favoriteAddressHandler = () => {
     navigate(routes.FAVORITE_ADDRESS);

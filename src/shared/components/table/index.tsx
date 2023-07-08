@@ -9,7 +9,7 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 
 interface Props {
-  gridData: Record<string, any>[];
+  gridData: Array<Record<string, any>>;
   options: {
     headers: string[];
     keys: string[];

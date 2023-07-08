@@ -1,7 +1,7 @@
 import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid';
 import styles from './styles.module.scss';
-import { ChangeEvent } from 'react';
+import type { ChangeEvent } from 'react';
 
 interface Props {
   name: string;
@@ -23,6 +23,7 @@ const Input = ({ name, label, error, classes, onChange, type, value }: Props) =>
     <Grid className={`${styles.fieldSet}  ${classes} `}>
       {type === 'password' && (
         <TextField
+          autoComplete='on'
           id={name}
           name={name}
           onChange={onInputHandler}
@@ -36,6 +37,7 @@ const Input = ({ name, label, error, classes, onChange, type, value }: Props) =>
       )}
       {type !== 'password' && (
         <TextField
+          autoComplete='on'
           id={name}
           name={name}
           value={value}

@@ -1,5 +1,5 @@
 import Button from '@material-ui/core/Button';
-import { MouseEventHandler } from 'react';
+import type { MouseEventHandler } from 'react';
 
 interface Props {
   label?: string;

@@ -6,5 +6,6 @@ declare global {
     email?: string;
     PhoneNumber?: string;
     username?: string;
+    password?: string;
   }
 }

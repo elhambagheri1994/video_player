@@ -49,7 +49,7 @@ function AddAddress({ url, onclose, open, editData }: Props) {
     if (!editData) {
       await httpService.post(url, values);
     } else {
-      await httpService.put(`${url}/${editData.id}`, values);
+      await httpService.put(`${url}/${editData?.id}`, values);
     }
     onclose();
   }

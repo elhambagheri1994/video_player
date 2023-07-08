@@ -7,6 +7,14 @@
       "id": 1,
       "PhoneNumber": "0936-602-6672",
       "name": "testee"
+    },
+    {
+      "email": "bagheri.elham1994@gmail.com",
+      "password": "$2a$10$75KWkuDC.x0j3qEVr4HGnu.RBNQoJMQyrsxqkGLB/XgN8hZk5XxhG",
+      "username": "elhame",
+      "name": "elham bagheri",
+      "PhoneNumber": "09128359901",
+      "id": 2
     }
   ],
   "public-addresses": [
@@ -21,7 +29,7 @@
   "favorite-addresses": [
     {
       "id": 1,
-      "name": "Home",
+      "name": "Homeee",
       "address": "No. 101, North Kargar St., Tehran",
       "latitude": 35.720179,
       "longitude": "51.389634eee"
@@ -32,20 +40,6 @@
       "latitude": "12",
       "longitude": "12",
       "id": 2
-    },
-    {
-      "name": "edit_test2ff",
-      "address": "ونک، میدان عطار نیشابوری، بزرگراه کردستان، محمدباق",
-      "latitude": "12",
-      "longitude": "ss12",
-      "id": 3
-    },
-    {
-      "name": "edit_test2ff",
-      "address": "ونک، میدان عطار نیشابوری، بزرگراه کردستان، محمدباق",
-      "latitude": "12",
-      "longitude": "12",
-      "id": 5
     }
   ]
 }

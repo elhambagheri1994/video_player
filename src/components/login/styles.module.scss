@@ -8,4 +8,10 @@
 }
 .formContainer {
   width: 60%;
+  .RegisterLink {
+    display: flex;
+    justify-content: center;
+    color: var(--primary);
+    margin-top: 2rem;
+  }
 }

@@ -1,5 +1,5 @@
-import { Dialog, DialogActions, DialogContent, DialogTitle, Modal } from '@mui/material';
-import { ReactElement } from 'react';
+import { Dialog, DialogContent, DialogTitle } from '@mui/material';
+import type { ReactElement } from 'react';
 
 interface Props {
   children: ReactElement;

@@ -26,18 +26,12 @@ interface Props {
 const DynamicForm = ({ fields, buttonText, submit, values }: Props) => {
   const renderFormElements = (props: any) =>
     fields.map((item: Field) => {
-      const fieldMap: Record<string, any> = {
-        text: Input,
-        password: Input,
-        number: Input
-      };
-      const Component = fieldMap[item.type];
       const error = Object.prototype.hasOwnProperty.call(props.errors, item.id)
         ? props.errors[item.id]
         : '';
 
       return (
-        <Component
+        <Input
           key={item.id}
           label={item.label}
           name={item.id}
@@ -50,7 +44,7 @@ const DynamicForm = ({ fields, buttonText, submit, values }: Props) => {
       );
     });
 
-  function createYupSchema(schema: any, config: any) {
+  function createYupSchema(schema: any, config: Field) {
     const { id, validations = [] } = config;
     let validator: any = string();
     validations.forEach((validation: Validation) => {
@@ -67,7 +61,7 @@ const DynamicForm = ({ fields, buttonText, submit, values }: Props) => {
   const validations = object().shape(yepSchema);
   return (
     <Formik validationSchema={validations} initialValues={values || {}} onSubmit={submit}>
-      {(props) => (
+      {(props: any) => (
         <form onSubmit={props.handleSubmit}>
           <div className={styles.formContainer}>
             {renderFormElements(props)}
